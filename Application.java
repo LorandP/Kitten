@@ -21,12 +21,14 @@ public class Application
                 finalWord.append(str.charAt(counter));
             }
         }
+        else
+            return "Please enter a valid string.";
         return finalWord.toString();
     }
     public static void main (String []args)
     {
         Application application = new Application();
 
-        System.out.println(application.missingChar("kitten",0));
+        System.out.println(application.missingChar("kitten",4));
     }
 }
