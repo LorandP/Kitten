@@ -8,22 +8,25 @@ public class Application
      * @param str the original string.
      * @param index the index that specifies which character to be removed from the string.
      */
-    private void missingChar(String str, int index)
+    private String missingChar(String str, int index)
     {
+        StringBuilder finalWord = new StringBuilder();
+
         if (str != null && !str.isEmpty())
         {
             for (int counter = 0; counter <= str.length()-1;counter++)
             {
                 if (counter == index)
                     counter++;
-                System.out.print(str.charAt(counter));
+                finalWord.append(str.charAt(counter));
             }
         }
+        return finalWord.toString();
     }
     public static void main (String []args)
     {
         Application application = new Application();
 
-        application.missingChar("kitten",0);
+        System.out.println(application.missingChar("kitten",0));
     }
 }
